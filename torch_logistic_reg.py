@@ -58,7 +58,7 @@ for i in range(50):
 	optimizer.step()
 
 
-#To check visually how the observed and predicted values are close. THe test data is taken from the training data.
+#To check how the observed and predicted values are close. The test data is taken from the training data.
 x_test = Variable(torch.from_numpy(x[0, :]).float())
 t_test = Variable(torch.from_numpy(t[0]).float())
 
@@ -66,7 +66,7 @@ print(my_logit.forward(x_test))
 print(t_test)
 
 
-#To check visually how the observed and predicted values are close. THe test data is independet of the training data.
+#To check how the observed and predicted values are close. The test data is independet of the training data.
 xx = np.random.normal(0, 1, size = (1, p))
 x_test = Variable(torch.from_numpy(xx).float(), requires_grad = False)
 
